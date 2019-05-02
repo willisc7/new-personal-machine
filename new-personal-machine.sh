@@ -60,6 +60,12 @@ killall Dock
 defaults write -g InitialKeyRepeat -int 20
 defaults write -g KeyRepeat -int 1
 
+# Turn on tap to click globally
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+sudo defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+sudo defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
 echo "
 TODO:
 - Disable all notifications

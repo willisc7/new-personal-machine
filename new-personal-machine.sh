@@ -59,3 +59,8 @@ killall Dock
 # Fast arrow key speed!
 defaults write -g InitialKeyRepeat -int 20
 defaults write -g KeyRepeat -int 1
+
+echo "
+TODO:
+- Disable all notifications
+"

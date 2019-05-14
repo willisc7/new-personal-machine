@@ -66,6 +66,11 @@ sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking 
 sudo defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 sudo defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# Install bash-it and add git completion
+git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+~/.bash_it/install.sh
+echo 'source "$BASH_IT"/completion/available/git.completion.bash' >> ~/.bash_profile
+
 echo "
 TODO:
 - Disable all notifications

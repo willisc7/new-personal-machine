@@ -6,6 +6,8 @@ set -e
 
 brew install wget
 
+brew install node
+
 brew cask install iterm2
 
 brew cask install visual-studio-code

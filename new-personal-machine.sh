@@ -72,7 +72,7 @@ sudo defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Install Oh My Zsh and plugins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo "plugins=(
+echo 'plugins=(
   git
   bundler
   dotenv
@@ -80,7 +80,8 @@ echo "plugins=(
   rake
   rbenv
   ruby
-)" >> ~/.zshrc
+)
+eval "$(direnv hook zsh)"' >> ~/.zshrc
 
 echo "
 TODO:

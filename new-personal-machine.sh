@@ -8,6 +8,8 @@ brew install wget
 
 brew install node
 
+brew install pivotal/tap/git-together
+
 brew cask install iterm2
 
 brew cask install visual-studio-code
@@ -70,6 +72,9 @@ sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking 
 sudo defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 sudo defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
+# Setup aliases
+echo 'alias git=git-together' > ~/.aliases
+
 # Install Oh My Zsh and plugins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 echo 'plugins=(
@@ -81,7 +86,8 @@ echo 'plugins=(
   rbenv
   ruby
 )
-eval "$(direnv hook zsh)"' >> ~/.zshrc
+eval "$(direnv hook zsh)"
+source ~/.aliases' >> ~/.zshrc
 
 echo "
 TODO:

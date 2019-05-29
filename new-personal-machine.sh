@@ -77,7 +77,9 @@ echo 'alias git=git-together' > ~/.aliases
 
 # Install Oh My Zsh and plugins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo 'plugins=(
+echo '
+alias git=git-together
+plugins=(
   git
   bundler
   dotenv
@@ -87,7 +89,6 @@ echo 'plugins=(
   ruby
 )
 eval "$(direnv hook zsh)"
-source ~/.aliases' >> ~/.zshrc
 
 echo "
 TODO:

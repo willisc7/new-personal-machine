@@ -4,11 +4,11 @@ set -e
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install wget node mas
+brew install wget node mas gpg
 
 brew install pivotal/tap/git-together
 
-brew cask install iterm2 visual-studio-code shiftit sublime-text firefox zoomus
+brew cask install iterm2 visual-studio-code shiftit sublime-text firefox zoomus keybase
 
 # Install Slack
 mas install 803453959
@@ -63,4 +63,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "
 TODO:
 - Disable all notifications
+- Configure GPG
+  - Log into keybase
+  - 'keybase pgp export | gpg --import' to get public PGP key into GPG
+  - 'keybase pgp list' to get <KEY_ID>
+  - 'keybase pgp export -q <KEY_ID> --secret | gpg --import --allow-secret-key-import' to get private PGP key into GPG
 "

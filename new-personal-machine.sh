@@ -66,6 +66,5 @@ TODO:
 - Configure GPG
   - Log into keybase
   - 'keybase pgp export | gpg --import' to get public PGP key into GPG
-  - 'keybase pgp list' to get <KEY_ID>
-  - 'keybase pgp export -q <KEY_ID> --secret | gpg --import --allow-secret-key-import' to get private PGP key into GPG
+  - 'gpg --import --allow-secret-key-import <(keybase pgp export --secret)' to get private PGP key into GPG
 "

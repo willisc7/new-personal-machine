@@ -4,26 +4,11 @@ set -e
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install wget
-
-brew install node
+brew install wget node mas
 
 brew install pivotal/tap/git-together
 
-brew cask install iterm2
-
-brew cask install visual-studio-code
-
-brew cask install shiftit
-
-brew cask install sublime-text
-
-brew cask install firefox
-
-brew cask install zoomus
-
-# Command line utility to install things from Mac App Store
-brew install mas
+brew cask install iterm2 visual-studio-code shiftit sublime-text firefox zoomus
 
 # Install Slack
 mas install 803453959
@@ -72,20 +57,8 @@ sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking 
 sudo defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 sudo defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-# Install Oh My Zsh and plugins
+# Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo '
-alias git=git-together
-plugins=(
-  git
-  bundler
-  dotenv
-  osx
-  rake
-  rbenv
-  ruby
-)
-eval "$(direnv hook zsh)"
 
 echo "
 TODO:

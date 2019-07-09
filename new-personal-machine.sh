@@ -22,14 +22,14 @@ brew cask install firefox
 
 brew cask install zoomus
 
+# Command line utility to install things from Mac App Store
+brew install mas
+
 # Install Slack
 mas install 803453959
 
 # Install Microsoft Remote Desktop
 mas install 1295203466
-
-# Command line utility to install things from Mac App Store
-brew install mas
 
 # Install Google Chrome (brew cask install broken at the moment)
 wget https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg

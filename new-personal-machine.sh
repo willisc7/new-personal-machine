@@ -4,7 +4,7 @@ set -e
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install wget node mas gpg
+brew install wget node mas gpg git
 
 brew install pivotal/tap/git-together
 
@@ -65,6 +65,8 @@ TODO:
 - Disable all notifications
 - Configure GPG
   - Log into keybase
-  - 'keybase pgp export | gpg --import' to get public PGP key into GPG
-  - 'gpg --import --allow-secret-key-import <(keybase pgp export --secret)' to get private PGP key into GPG
+  - keybase pgp export | gpg --import (to get public PGP key into GPG)
+  - gpg --list-secret-keys --keyid-format LONG (to get <KEY-ID> (e.g. format is rsa4096/<KEY-ID>))
+  - gpg --import --allow-secret-key-import <(keybase pgp export --secret) (to get private PGP key into GPG)
+  - echo 'export GPG_TTY=$(tty)' >> ~/.zshrc (not sure why, but gpg signing will fail if you dont do this)
 "

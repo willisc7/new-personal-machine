@@ -6,7 +6,7 @@ set -e
 
 brew install wget node mas gpg git
 
-brew install pivotal/tap/git-together
+brew install pivotal/tap/git-together cloudfoundry/tap/bosh-cli
 
 brew cask install iterm2 visual-studio-code shiftit sublime-text firefox zoomus keybase
 

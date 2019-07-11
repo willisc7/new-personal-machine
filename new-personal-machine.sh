@@ -8,7 +8,7 @@ brew install wget node mas gpg git
 
 brew install pivotal/tap/git-together cloudfoundry/tap/bosh-cli
 
-brew cask install iterm2 visual-studio-code shiftit sublime-text firefox zoomus keybase
+brew cask install iterm2 visual-studio-code shiftit sublime-text firefox zoomus keybase flycut
 
 # Install Slack
 mas install 803453959
